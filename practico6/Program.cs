@@ -59,7 +59,7 @@ ya que no se puede realizar ninguna conversión.
 
 */
 
-// -------------- Ejercicio 2-----------------------
+// -------------- Ejercicio 3-----------------------
 string? numeroText;
 float numero1=0,numero2=0, resultado=0;
 int opcion;
