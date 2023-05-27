@@ -13,7 +13,10 @@ número sólo si éste es mayor a 0.*/
 
 /*int intNum = 0;
 bool anda= false;
-string? Numtexto = " ";
+string? Numtexto = " "; // Los tipos de datos primitivos, como int, double, bool, etc., no pueden 
+                        // contener valores nulos. Sin embargo, al agregar el signo de interrogación después 
+                        //del tipo de dato, como int?, double?, bool?, se permite que ese tipo de dato pueda 
+                        //aceptar el valor null además de los valores normales.
 int digito;
 int NumReversa=0;
 
@@ -39,26 +42,60 @@ if(intNum > 0 )
     Console.WriteLine("Número invertido: " + NumReversa);
 }*/
 
+// funcion ( tipo.TryParse )
+/*La función se utiliza para intentar convertir una representación de cadena (string) 
+de un valor en un tipo de dato específico, sin lanzar una excepción en caso de que la conversión falle.
+La principal ventaja de utilizar TryParse en lugar de otros métodos de conversión estándar, como 
+Convert.ToInt32 o int.Parse, es que evita lanzar una excepción en caso de que la conversión no sea exitosa.
+En su lugar, se utiliza un valor de retorno booleano para indicar si la conversión tuvo éxito o no.
+
+La conversión utilizando int.TryParse puede no ser exitosa en las siguientes situaciones:
+
+Si la cadena proporcionada no representa un número válido en formato entero. 
+Por ejemplo, si se intenta convertir la cadena "abc" en un entero, la conversión fallará.
+Si la cadena proporcionada es nula o está vacía. int.TryParse devuelve false en estos casos, 
+ya que no se puede realizar ninguna conversión.
+
+
+*/
+
 // -------------- Ejercicio 2-----------------------
 string? numeroText;
 int eleccion=1;
-float numero1,numero2, resultado=0;
-int decision;
-
-Console.WriteLine("ingrese un numero para operar");
-numeroText= Console.ReadLine();
-float.TryParse(numeroText, out numero1);
-Console.WriteLine("ingrese otro numero para operar");
-numeroText= Console.ReadLine();
-float.TryParse(numeroText, out numero2);
-
+float numero1=0,numero2=0, resultado=0;
+int opcion;
+bool valido= false;
 do
 {
     Console.WriteLine("( SELECCIONE LA OPERACION)");
-    Console.WriteLine("(1)Suma, (2)Resta, (3)Multiplicacion, (4)division");
+    Console.WriteLine(" \t(1)Suma\n \t(2)Resta\n \t(3)Multiplicacion\n \t(4)division\n");
     numeroText= Console.ReadLine();
-    int.TryParse(numeroText, out eleccion);
+    int.TryParse(numeroText, out opcion);
+    while (!valido)
+    {
+        Console.WriteLine("Dame el 1er numero: ");
+        numeroText= Console.ReadLine();
+        valido=float.TryParse(numeroText, out numero1);
+        if (!valido)
+        {
+            Console.WriteLine("El numero " + numeroText + " no es valido");
+        }
+    }
 
+    valido=false;
+
+    while (!valido)
+    {
+        Console.WriteLine("Dame el 2do numero: ");
+        numeroText= Console.ReadLine();
+        valido=float.TryParse(numeroText, out numero2);
+        if (!valido)
+        {
+            Console.WriteLine("El numero " + numeroText + " no es valido");
+        }
+    }
+
+    valido = false;
     switch (eleccion)
     {
         case 1:
@@ -80,8 +117,8 @@ do
         break;
     }
     Console.WriteLine("Resultado = "+ resultado);
-    Console.WriteLine("desea hacer otra operacion?");
+    Console.WriteLine("¿ Desea hacer otra operacion ?");
     numeroText= Console.ReadLine();
-    int.TryParse(numeroText, out decision);
+    int.TryParse(numeroText, out opcion);
 
-} while (decision==1);
+} while (opcion==1);
