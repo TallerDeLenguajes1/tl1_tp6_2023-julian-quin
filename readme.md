@@ -7,14 +7,14 @@
 
 - ¿Qué secuencias de escape tiene el tipo string?
   <p>
-    \": Representa el carácter de comillas dobles (").<br>
-    \': Representa el carácter de comilla simple (').<br>
-    \\: Representa el carácter de barra invertida (\).<br>
-    \n: Representa un salto de línea.<br>
-    \r: Representa un retorno de carro.<br>
-    \t: Representa un tabulador horizontal.<br>
-    \b: Representa un retroceso.<br>
-    \f: Representa un avance de página.<br>
+    \" Representa el carácter de comillas dobles (")<br>
+    \' Representa el carácter de comilla simple (')<br>
+    \\ Representa el carácter de barra invertida (\)<br>
+    \n Representa un salto de línea<br>
+    \r Representa un retorno de carro<br>
+    \t Representa un tabulador horizontal<br>
+    \b Representa un retroceso<br>
+    \f Representa un avance de página<br>
   </p>
 
 - ¿Qué sucede cuando utiliza el carácter @ y $ antes de una cadena de texto?
