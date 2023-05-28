@@ -62,7 +62,7 @@ ya que no se puede realizar ninguna conversión.
 // -------------- Ejercicio 2 y 3 (ya con merge)-----------------------
 string? numeroText;
 float numero1=0,numero2=0, resultado=0;
-int opcion;
+int opcion,ParteEntera;
 bool valido= false;
 float max,min;
 do
@@ -100,12 +100,15 @@ do
         break;
         case 5:
            numero1=validarNum();
+           Console.WriteLine("Lista de operaciones avanzadas al numero: "+ numero1 +"\n");
            Console.WriteLine("Valor absoluto: "+ Math.Abs(numero1));
            Console.WriteLine("Cuadrado: "+ Math.Pow(numero1,2));
            if(numero1 >= 0) Console.WriteLine("Raiz Cuadrada: "+ Math.Sqrt(numero1));
            else Console.WriteLine("Raiz Cuadrada: no existe en los R");
            Console.WriteLine("Seno: "+ Math.Sin(numero1));
            Console.WriteLine("coseno: "+ Math.Cos(numero1));
+           ParteEntera=(int)Math.Floor(numero1);
+           Console.WriteLine("Parte entera: "+ParteEntera+"\n");
         break;
         case 6:
            numero1=validarNum();
@@ -116,7 +119,7 @@ do
            Console.WriteLine("Minimo: "+ min);
         break; 
     }
-    if (opcion >= 1 && opcion <= 5) Console.WriteLine("Resultado = "+ resultado);
+    if (opcion >= 1 && opcion <= 4) Console.WriteLine("Resultado = "+ resultado);
     Console.WriteLine("¿ Desea hacer otra operacion 1=Ok o 0=No ?");
     numeroText= Console.ReadLine();
     int.TryParse(numeroText, out opcion);
