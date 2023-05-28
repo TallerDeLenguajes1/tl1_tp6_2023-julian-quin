@@ -18,3 +18,5 @@
   </p>
 
 <strong>¿Qué sucede cuando utiliza el carácter @ y $ antes de una cadena de texto?</strong>
+<p>Cuando se utiliza el carácter @ antes de una cadena de texto, significa que la cadena se interpreta literalmente y los caracteres de escape, como las secuencias \n, \t, etc., no se procesan.</p>
+<p>uando se utiliza el símbolo $ antes de una cadena de texto, se crea una cadena de texto interpolada. Permite incrustar expresiones o variables dentro de una cadena de texto utilizando la sintaxis {}. Las expresiones o variables dentro de {} se evalúan y se insertan en la cadena de texto en tiempo de ejecución.</p>
