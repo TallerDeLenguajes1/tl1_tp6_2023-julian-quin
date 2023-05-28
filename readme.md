@@ -6,14 +6,15 @@
   Cuando trabajamos con una variable de tipo string, en realidad tienes una referencia de la ubicación de la cadena en el heap. Es decir, la variable no contiene directamente el contenido de la cadena, sino una forma de encontrarlo en la memoria.
 
 - ¿Qué secuencias de escape tiene el tipo string?
-  
-    \": Representa el carácter de comillas dobles (").
-    \': Representa el carácter de comilla simple (').
-    \\: Representa el carácter de barra invertida (\).
-    \n: Representa un salto de línea.
-    \r: Representa un retorno de carro.
-    \t: Representa un tabulador horizontal.
-    \b: Representa un retroceso.
-    \f: Representa un avance de página.
-    
+  <p>
+    \": Representa el carácter de comillas dobles (").<br>
+    \': Representa el carácter de comilla simple (').<br>
+    \\: Representa el carácter de barra invertida (\).<br>
+    \n: Representa un salto de línea.<br>
+    \r: Representa un retorno de carro.<br>
+    \t: Representa un tabulador horizontal.<br>
+    \b: Representa un retroceso.<br>
+    \f: Representa un avance de página.<br>
+  </p>
+
 - ¿Qué sucede cuando utiliza el carácter @ y $ antes de una cadena de texto?
