@@ -1,16 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-/*Console.WriteLine("Hello, World!"); //pirnt f
-int a;
-int b;
-a=10;
-b=a;
-Console.WriteLine("valor de a:"+a);
-Console.WriteLine("valor de b:"+b);*/
-
-/*Construir un programa que permita invertir un número. Verifique que el
-texto ingresado es de hecho un número y, en caso afirmativo, realice la inversión del
-número sólo si éste es mayor a 0.*/
-
+﻿
+//----------Ejercicio1------------------------
+/*
 int intNum = 0;
 bool anda= false;
 string? Numtexto = " ";
@@ -39,3 +29,7 @@ if(intNum > 0 )
     }
     Console.WriteLine("Número invertido: " + NumReversa);
 }
+*/
+
+
+//------------------Ejercicio4---------------------
